@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // let hasDriversLicense = false;
 // const passTest = true;
@@ -53,18 +53,38 @@
 // console.log(yearsUntilRetirement(1980, 'bob'));
 
 
-function cutFruitPieces(fruit) {
-    return fruit * 4;
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//     const applePieces = cutFruitPieces(apples)
+//     const orangePieces = cutFruitPieces(oranges)
+
+//     const juice = `Juice with ${applePieces} pieces of apples, and ${orangePieces} pieces of oranges.`;
+//     return juice
+// }
+
+// const myJuice = fruitProcessor(2, 3);
+// console.log(myJuice)
+
+const calcAge = function(birthYear) {
+    return 2037 - birthYear
 }
 
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples)
-    const orangePieces = cutFruitPieces(oranges)
-
-    const juice = `Juice with ${applePieces} pieces of apples, and ${orangePieces} pieces of oranges.`;
-    return juice
+const calcRetirement = function(age) {
+    return 65 - age
 }
 
-const myJuice = fruitProcessor(2, 3);
-console.log(myJuice)
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = calcRetirement(age)
 
+    if(retirement > 0) {
+        return `${firstName} retires in ${retirement} years`;
+    } else {
+        return `${firstName} has been retired for ${Math.abs(retirement)} years 💀`
+    }
+}
+// console.log(yearsUntilRetirement(1991, 'Junior'))
+console.log(yearsUntilRetirement(1950, 'Sam'))
