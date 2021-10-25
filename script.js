@@ -12,23 +12,29 @@
 // const interface = "Audio"
 // const private = '420'
 
-function logger() {
-    console.log("my name is Jr");
+// 
+// function declaration
+function calcAge1(year) {
+    return 2037 - year;
 }
 
-// calling / running / invoking function
-logger();
-logger();
-logger();
-
-function fruitProcessor(apples, oranges) {
-    // console.log(apples, oranges);
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`
-    return juice
+// function declaration
+function calcTrueAge(year, birthYear) {
+    return year - birthYear
 }
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice)
+age1 = calcAge1(2021);
+console.log(age1)
 
-const appleOrangeJuice = fruitProcessor(2, 4)
-console.log(appleOrangeJuice)
+myAge = calcTrueAge(2021, 1987)
+console.log(myAge)
+
+//function expression (function with no name) anonymous function
+
+//functions are values. so we can store it in a variable
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1991)
+console.log(age1, age2, 'this is the expression')
