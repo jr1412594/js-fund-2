@@ -111,30 +111,74 @@
 //TEST DATA 2 DOLPHINS 85, 54, 41
             //KOALAS 23, 34, 27
 
-const average = (a, b, c) => (a + b + c) / 3
+// const average = (a, b, c) => (a + b + c) / 3
 
-const dolphinsGame1Average = average(44, 23, 71) //46
-const koalasGame1Average = average(65, 54, 49) // 56
+// const dolphinsGame1Average = average(44, 23, 71) //46
+// const koalasGame1Average = average(65, 54, 49) // 56
 
-const dolphinsGame2Average = average(85, 54, 41) //60
-const koalasGame2Average = average(23, 34, 27) // 28
+// const dolphinsGame2Average = average(85, 54, 41) //60
+// const koalasGame2Average = average(23, 34, 27) // 28
 
-// console.log(dolphinsGame1Average, ': dolphins')
-// console.log(koalasGame1Average, ': koalas')
+// // console.log(dolphinsGame1Average, ': dolphins')
+// // console.log(koalasGame1Average, ': koalas')
 
-// console.log(dolphinsGame2Average, ': dolphins')
-// console.log(koalasGame2Average, ': koalas')
+// // console.log(dolphinsGame2Average, ': dolphins')
+// // console.log(koalasGame2Average, ': koalas')
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-    if(avgDolphins >= avgKoalas * 2) {
-        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
-    } else if (avgKoalas >= avgDolphins * 2) {
-        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
-    } else { 
-        console.log('There are no winners, as nobody doubled the score.') 
-    }
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//     if(avgDolphins >= avgKoalas * 2) {
+//         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+//     } else if (avgKoalas >= avgDolphins * 2) {
+//         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+//     } else { 
+//         console.log('There are no winners, as nobody doubled the score.') 
+//     }
+// }
+
+// checkWinner(dolphinsGame1Average, koalasGame1Average, ': Game One!') //suckers
+// checkWinner(dolphinsGame2Average, koalasGame2Average, ': Game Two!') // dolphins win 60 vs. 28
+// checkWinner(999, 63)
+//ARRAYS
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+// const friends = [friend1, friend2, friend3]
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends)
+
+// const years = new Array(1991, 1984, 2008, 2020);
+// console.log(years);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);;
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Junior';
+
+console.log(friends);
+
+//excercise
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear
 }
 
-checkWinner(dolphinsGame1Average, koalasGame1Average, ': Game One!') //suckers
-checkWinner(dolphinsGame2Average, koalasGame2Average, ': Game Two!') // dolphins win 60 vs. 28
-// checkWinner(999, 63)
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const newArray = function (years) {
+    // const age = []
+    // for(const i of years) {
+    //     let trueAge = calcAge(i);
+    //     age.push(trueAge)
+    // }
+    // return age
+
+    return years.map(year => calcAge(year))
+}
+console.log(newArray(years))
+
+
+
+
