@@ -68,23 +68,73 @@
 // const myJuice = fruitProcessor(2, 3);
 // console.log(myJuice)
 
-const calcAge = function(birthYear) {
-    return 2037 - birthYear
-}
+// const calcAge = function(birthYear) {
+//     return 2037 - birthYear
+// }
 
-const calcRetirement = function(age) {
-    return 65 - age
-}
+// const calcRetirement = function(age) {
+//     return 65 - age
+// }
 
-const yearsUntilRetirement = function (birthYear, firstName) {
-    const age = calcAge(birthYear);
-    const retirement = calcRetirement(age)
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//     const age = calcAge(birthYear);
+//     const retirement = calcRetirement(age)
 
-    if(retirement > 0) {
-        return `${firstName} retires in ${retirement} years`;
-    } else {
-        return `${firstName} has been retired for ${Math.abs(retirement)} years 💀`
+//     if(retirement > 0) {
+//         return `${firstName} retires in ${retirement} years`;
+//     } else {
+//         return `${firstName} has been retired for ${Math.abs(retirement)} years 💀`
+//     }
+// }
+// // console.log(yearsUntilRetirement(1991, 'Junior'))
+// console.log(yearsUntilRetirement(1950, 'Sam'))
+
+//CODING CHALLENGE FUNCTIONS
+
+// 1 CREATE AN ARROW FUNCTION 'calcAverage' TO CALCULATE
+// THE AVERAGE OF 3 SCORES
+
+// 2 USE THE FUNCTION TO CALCULATE THE AVERAGE FOR BOTH TEAMS
+
+// 3 CREATE A FUNCTION 'CHECK WINNER' THAT TAKES THE AVERAGE SCORE OF EACH TEAM AS PERAMETERS
+//('AVGDOLPHINS' AND 'AVGKOALAS') AND THEN LOGS THE WINNER TO THE CONSOLE,
+// TOGETHER WITH THE VICTORY POINTS, ACCORDING TO THE RULE ABOVE. EXAMPLE: 
+// 'KOALAS WIN (30 VS 13)'
+
+//4 USE TEH CHECK WINNER FUNCTION TO DETERMINE THE WINNER FOR BOTH DATA 1 AND DATA 2
+
+// 5 IGNOR DRAWS THIS TIME
+
+//TEST DATA 1 DOLPHINS 4, 23, 71
+            //KOALAS 65, 54, 49
+
+//TEST DATA 2 DOLPHINS 85, 54, 41
+            //KOALAS 23, 34, 27
+
+const average = (a, b, c) => (a + b + c) / 3
+
+const dolphinsGame1Average = average(44, 23, 71) //46
+const koalasGame1Average = average(65, 54, 49) // 56
+
+const dolphinsGame2Average = average(85, 54, 41) //60
+const koalasGame2Average = average(23, 34, 27) // 28
+
+// console.log(dolphinsGame1Average, ': dolphins')
+// console.log(koalasGame1Average, ': koalas')
+
+// console.log(dolphinsGame2Average, ': dolphins')
+// console.log(koalasGame2Average, ': koalas')
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if(avgDolphins >= avgKoalas * 2) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+    } else if (avgKoalas >= avgDolphins * 2) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+    } else { 
+        console.log('There are no winners, as nobody doubled the score.') 
     }
 }
-// console.log(yearsUntilRetirement(1991, 'Junior'))
-console.log(yearsUntilRetirement(1950, 'Sam'))
+
+checkWinner(dolphinsGame1Average, koalasGame1Average, ': Game One!') //suckers
+checkWinner(dolphinsGame2Average, koalasGame2Average, ': Game Two!') // dolphins win 60 vs. 28
+// checkWinner(999, 63)
