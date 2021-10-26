@@ -139,46 +139,68 @@
 // checkWinner(dolphinsGame2Average, koalasGame2Average, ': Game Two!') // dolphins win 60 vs. 28
 // checkWinner(999, 63)
 //ARRAYS
-const friend1 = 'Michael';
-const friend2 = 'Steven';
-const friend3 = 'Peter';
+// const friend1 = 'Michael';
+// const friend2 = 'Steven';
+// const friend3 = 'Peter';
 
-// const friends = [friend1, friend2, friend3]
-const friends = ['Michael', 'Steven', 'Peter'];
-console.log(friends)
+// // const friends = [friend1, friend2, friend3]
+// const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends)
 
-// const years = new Array(1991, 1984, 2008, 2020);
-// console.log(years);
+// // const years = new Array(1991, 1984, 2008, 2020);
+// // console.log(years);
 
-console.log(friends[0]);
-console.log(friends[2]);
-console.log(friends.length);;
-console.log(friends[friends.length - 1]);
+// console.log(friends[0]);
+// console.log(friends[2]);
+// console.log(friends.length);;
+// console.log(friends[friends.length - 1]);
 
-friends[2] = 'Junior';
+// friends[2] = 'Junior';
+
+// console.log(friends);
+
+// //excercise
+
+// const calcAge = function (birthYear) {
+//     return 2037 - birthYear
+// }
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const newArray = function (years) {
+//     // const age = []
+//     // for(const i of years) {
+//     //     let trueAge = calcAge(i);
+//     //     age.push(trueAge)
+//     // }
+//     // return age
+
+//     return years.map(year => calcAge(year))
+// }
+// console.log(newArray(years))
+
+
+// ADD ELEMENT TO BACK (PUSH())
+// ADD ELEMENT TO FRONT (UNSHIFT())
+
+const friends = ["Michael", 'Steven', 'Peter'];
 
 console.log(friends);
+const newLength = friends.push('Miso Cat');
+console.log(friends);
+console.log(newLength)
 
-//excercise
-
-const calcAge = function (birthYear) {
-    return 2037 - birthYear
-}
-
-const years = [1990, 1967, 2002, 2010, 2018];
-
-const newArray = function (years) {
-    // const age = []
-    // for(const i of years) {
-    //     let trueAge = calcAge(i);
-    //     age.push(trueAge)
-    // }
-    // return age
-
-    return years.map(year => calcAge(year))
-}
-console.log(newArray(years))
+friends.unshift('Pierogi pup');
+console.log(friends)
 
 
+// REMOVE ELEMENT FROM THE BACK (POP())
+// REMOVE ELEMENT FORM THE FRON (SHIFT())
+const shiftElement = friends.shift();
+const poppedElement = friends.pop()
+console.log(friends);
+console.log(poppedElement)
+console.log(shiftElement)
 
+console.log(friends.indexOf('Peter'))
 
