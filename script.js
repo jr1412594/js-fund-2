@@ -183,24 +183,56 @@
 // ADD ELEMENT TO BACK (PUSH())
 // ADD ELEMENT TO FRONT (UNSHIFT())
 
-const friends = ["Michael", 'Steven', 'Peter'];
+// const friends = ["Michael", 'Steven', 'Peter'];
 
-console.log(friends);
-const newLength = friends.push('Miso Cat');
-console.log(friends);
-console.log(newLength)
+// console.log(friends);
+// const newLength = friends.push('Miso Cat');
+// console.log(friends);
+// console.log(newLength)
 
-friends.unshift('Pierogi pup');
-console.log(friends)
+// friends.unshift('Pierogi pup');
+// console.log(friends)
 
 
-// REMOVE ELEMENT FROM THE BACK (POP())
-// REMOVE ELEMENT FORM THE FRON (SHIFT())
-const shiftElement = friends.shift();
-const poppedElement = friends.pop()
-console.log(friends);
-console.log(poppedElement)
-console.log(shiftElement)
+// // REMOVE ELEMENT FROM THE BACK (POP())
+// // REMOVE ELEMENT FORM THE FRON (SHIFT())
+// const shiftElement = friends.shift();
+// const poppedElement = friends.pop()
+// console.log(friends);
+// console.log(poppedElement)
+// console.log(shiftElement)
 
-console.log(friends.indexOf('Peter'))
+// console.log(friends.indexOf('Peter'))
+
+//CODE CHALLENGE ARRAYS
+const bills = [125, 555, 44];
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+
+const findTips = (bills) => {
+    return bills.map(bill => calcTip(bill))
+}
+
+const findTotals = (bills) => {
+    const totals = [];
+    const tips = findTips(bills);
+
+    for(let i in tips) {
+        totals.push(tips[i] + bills[i]);
+    }
+    return totals;
+}
+
+const tips = [];
+
+tips.push(calcTip(bills[0]));
+tips.push(calcTip(bills[1]));
+tips.push(calcTip(bills[2]));
+
+console.log('tips :', tips);
+console.log('find tips :',findTips(bills))
+console.log('find totals :', findTotals(bills))
 
