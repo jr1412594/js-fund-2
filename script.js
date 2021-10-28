@@ -240,13 +240,13 @@
 
 
 // keys also referred to as properties.
-const pierogi = {
-    firstName: 'Pierogi',
-    lastName: 'Pup',
-    age: 2021 - 2019,
-    job: 'Guard Dog',
-    friends: ['Miso', 'Mom', 'Dad', 'Curly', 'Dino']
-}
+// const pierogi = {
+//     firstName: 'Pierogi',
+//     lastName: 'Pup',
+//     age: 2021 - 2019,
+//     job: 'Guard Dog',
+//     friends: ['Miso', 'Mom', 'Dad', 'Curly', 'Dino']
+// }
 
 
 
@@ -282,3 +282,42 @@ const pierogi = {
 // console.log(pierogi)
 
 // console.log(`${pierogi.firstName} has ${pierogi.friends.length} friends, and his best friend is called ${pierogi.friends[0]}!`)
+
+const pierogi = {
+    firstName: 'Pierogi',
+    lastName: 'Pup',
+    birthYear: 2019,
+    job: 'Guard Dog',
+    friends: ['Miso', 'Mom', 'Dad', 'Curly', 'Dino'],
+    hasDriversLicense: false,
+    
+    // calcAge: function(birthYear) {
+    //     return 2021 - birthYear
+    // }
+
+    // calcAge: function() {
+    //     console.log(this, 'this is the jonas object')
+    //     return 2021 - this.birthYear
+    // }
+
+    calcAge: function() {
+        this.age = 2021 - this.birthYear;
+        return this.age
+
+    },
+    canDrive: function() {
+        return this.hasDriversLicense ? "a" : "no" 
+    },
+    getSummary: function() {
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${this.canDrive()} drivers License`
+    }
+
+}
+
+console.log(pierogi)
+console.log(pierogi.calcAge())
+console.log(pierogi.age,'this is the age from this . age')
+// pierogi.hasDriversLicense = true;
+
+console.log(pierogi.getSummary())
+// console.log(`${pierogi.firstName} is a ${pierogi.age}-year old ${pierogi.job}, and he has ${pierogi.canDrive()} drivers License`)
