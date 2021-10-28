@@ -205,34 +205,80 @@
 // console.log(friends.indexOf('Peter'))
 
 //CODE CHALLENGE ARRAYS
-const bills = [125, 555, 44];
+// const bills = [125, 555, 44];
 
-const calcTip = function (bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+// const calcTip = function (bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+// }
+
+
+// const findTips = (bills) => {
+//     return bills.map(bill => calcTip(bill))
+// }
+
+// const findTotals = (bills) => {
+//     const totals = [];
+//     const tips = findTips(bills);
+
+//     for(let i in tips) {
+//         totals.push(tips[i] + bills[i]);
+//     }
+//     return totals;
+// }
+
+// const tips = [];
+
+// tips.push(calcTip(bills[0]));
+// tips.push(calcTip(bills[1]));
+// tips.push(calcTip(bills[2]));
+
+// console.log('tips :', tips);
+// console.log('find tips :',findTips(bills))
+// console.log('find totals :', findTotals(bills))
+
+//OBJECTS
+
+
+// keys also referred to as properties.
+const pierogi = {
+    firstName: 'Pierogi',
+    lastName: 'Pup',
+    age: 2021 - 2019,
+    job: 'Guard Dog',
+    friends: ['Miso', 'Mom', 'Dad', 'Curly', 'Dino']
 }
 
 
-const findTips = (bills) => {
-    return bills.map(bill => calcTip(bill))
-}
 
-const findTotals = (bills) => {
-    const totals = [];
-    const tips = findTips(bills);
+// DOT NOTATION MUST USE ACTUAL KEY NAME OR REAL PROPERTY
+// BRACKET NOTATION ALLOWS FOR EXPRESSIONS
+// console.log(pierogi);
 
-    for(let i in tips) {
-        totals.push(tips[i] + bills[i]);
-    }
-    return totals;
-}
+// console.log(pierogi.lastName);
+// console.log(pierogi['firstName']);
 
-const tips = [];
+// const nameKey = 'Name';
+// console.log(pierogi['first' + nameKey]);
+// console.log(pierogi['last' + nameKey]);
 
-tips.push(calcTip(bills[0]));
-tips.push(calcTip(bills[1]));
-tips.push(calcTip(bills[2]));
 
-console.log('tips :', tips);
-console.log('find tips :',findTips(bills))
-console.log('find totals :', findTotals(bills))
+//prompt creates an imput field in a pop up window.
 
+// const interestedIn = prompt("What do you want to know about Pierogi? choose between firstName, lastName, age, job, and firends.");
+
+// const answerToPrompt = function (answer) {
+//     // if(answer) {
+//         //     console.log('this is not the droid you are looking for.')
+//         // } else {
+//             //     console.log(pierogi[answer]);
+//             // }
+//             pierogi[answer] ? console.log(pierogi[answer]) : console.log('this is not the droid you are looking for.')
+// }
+// answerToPrompt(interestedIn)
+
+
+// pierogi.tail = true;
+// pierogi['location'] = 'Monument';
+// console.log(pierogi)
+
+// console.log(`${pierogi.firstName} has ${pierogi.friends.length} friends, and his best friend is called ${pierogi.friends[0]}!`)
