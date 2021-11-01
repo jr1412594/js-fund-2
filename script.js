@@ -340,32 +340,97 @@ Test data: Marks weight 78 kg, and is 1.69 m tall.
             John weight 92 kg and is 1.95 m tall.
 */
 
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi =  this.mass / this.height ** 2;
-        return this.bmi;
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi =  this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
+// mark.calcBMI()
+
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
+// john.calcBMI()
+
+
+// if(mark.bmi > john.bmi) {
+//     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`)
+// } else {
+//     console.log(`${john.fullName}'s BMI (${$john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`)
+
+// }
+
+// for loop keeps running while condition is true
+// for(let i = 1; i <= 10; i++) {
+//     console.log(`Lifting weights repitirtion ${i}`)
+// }
+
+
+// const pierogi = {
+//     firstName: "Pierogi",
+//     lastName: "Pup",
+//     age: 2021 - 2019,
+//     job: "Guard Dog Extrodinare",
+//     friends: ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"]
+// }
+
+const pierogiArray = [
+    "Pierogi",
+    "Pup",
+    2021 - 2019,
+    "Guard Dog",
+    ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
+    true
+];
+
+// const arrayRequest = []
+// for(let i = 0; i < pierogiArray.length; i++) {
+//     console.log(pierogiArray[i], typeof pierogiArray[i])
+//     arrayRequest.push(typeof pierogiArray[i])
+// }
+// console.log(arrayRequest,': are you not entertained!')
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// const calcAge = function(years) {
+//     return 2037 - years
+// }
+
+// for(let i = 0; i < years.length; i++) {
+//     ages.push(calcAge(years[i]));
+// }
+
+// console.log(ages, ': ages')
+
+// CONTINUE AND BREAK
+
+//CONTINUE IS TO EXIT THE CURRENT ITTERATION OF THE LOOP AND CONTINUE TO THE NEXT ONE
+//BREAK IS TO COMPLETELY BRAKE OUT OF THE LOOP.
+
+
+console.log('--Only Strings--')
+for(let i = 0; i < pierogiArray.length; i++) {
+    if(typeof pierogiArray[i] !== 'string') {
+        continue
+    } else {
+        console.log(pierogiArray[i], "in last for loop")
     }
 }
-mark.calcBMI()
 
-const john = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
+console.log('---nothing after the number')
+for (let i = 0; i < pierogiArray.length; i++) {
+    console.log(pierogiArray[i])
+    if(typeof pierogiArray[i] === 'number') break;
 }
-john.calcBMI()
 
-
-if(mark.bmi > john.bmi) {
-    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`)
-} else {
-    console.log(`${john.fullName}'s BMI (${$john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`)
-
-}
