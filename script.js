@@ -384,14 +384,14 @@ Test data: Marks weight 78 kg, and is 1.69 m tall.
 //     friends: ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"]
 // }
 
-const pierogiArray = [
-    "Pierogi",
-    "Pup",
-    2021 - 2019,
-    "Guard Dog",
-    ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
-    true
-];
+// const pierogiArray = [
+//     "Pierogi",
+//     "Pup",
+//     2021 - 2019,
+//     "Guard Dog",
+//     ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
+//     true
+// ];
 
 // const arrayRequest = []
 // for(let i = 0; i < pierogiArray.length; i++) {
@@ -419,18 +419,30 @@ const pierogiArray = [
 //BREAK IS TO COMPLETELY BRAKE OUT OF THE LOOP.
 
 
-console.log('--Only Strings--')
-for(let i = 0; i < pierogiArray.length; i++) {
-    if(typeof pierogiArray[i] !== 'string') {
-        continue
-    } else {
-        console.log(pierogiArray[i], "in last for loop")
-    }
-}
+// console.log('--Only Strings--')
+// for(let i = 0; i < pierogiArray.length; i++) {
+//     if(typeof pierogiArray[i] !== 'string') {
+//         continue
+//     } else {
+//         console.log(pierogiArray[i], "in last for loop")
+//     }
+// }
 
-console.log('---nothing after the number')
-for (let i = 0; i < pierogiArray.length; i++) {
-    console.log(pierogiArray[i])
-    if(typeof pierogiArray[i] === 'number') break;
-}
+// console.log('---nothing after the number')
+// for (let i = 0; i < pierogiArray.length; i++) {
+//     console.log(pierogiArray[i])
+//     if(typeof pierogiArray[i] === 'number') break;
+// }
 
+const pierogiArray = [
+    "Pierogi",
+    "Pup",
+    2021 - 2019,
+    "Guard Dog",
+    ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
+    true
+];
+
+for (let i = pierogiArray.length - 1; i >= 0; i--) {
+    console.log(i, pierogiArray[i]);
+}
