@@ -434,15 +434,80 @@ Test data: Marks weight 78 kg, and is 1.69 m tall.
 //     if(typeof pierogiArray[i] === 'number') break;
 // }
 
-const pierogiArray = [
-    "Pierogi",
-    "Pup",
-    2021 - 2019,
-    "Guard Dog",
-    ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
-    true
-];
+// const pierogiArray = [
+//     "Pierogi",
+//     "Pup",
+//     2021 - 2019,
+//     "Guard Dog",
+//     ["Miso Cat", "Dino", "Maam", "Daadd", "Curls"],
+//     true
+// ];
 
-for (let i = pierogiArray.length - 1; i >= 0; i--) {
-    console.log(i, pierogiArray[i]);
+// for (let i = pierogiArray.length - 1; i >= 0; i--) {
+//     console.log(i, pierogiArray[i]);
+// }
+
+// for(let rep = 1; rep <= 10; rep++) {
+//     console.log(`lifting weights repetition ${rep} 🏋️‍♀️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`lifting weights repetition ${rep} 🏋️‍♀️`);
+//     rep++
+// }
+
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// // console.log(dice)
+// while(dice !== 6) {
+//     console.log(`you rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if(dice === 6) console.log('Loop is about to end..')
+// }
+
+
+
+/*
+1. Create an array 'bills' containing all 10 test bill values
+
+2. Create empty arrays for the tips and the totals 
+    ('tips' and 'totals')
+
+3. Use the 'calcTip' function we wrote before (no need to repeat)
+    to calculate tips and total values (bill + tip) for every bill value in the bills array
+    Use a for loop to perform the 10 calculations!
+
+TEST DATA 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52
+
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays
+
+*/
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
 }
+const calcAverage = function (arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum / arr.length
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i])
+}
+console.log('tips :', tips);
+console.log('totals :', totals)
+console.log('average : 275.19', calcAverage(totals));
+
+console.log("tips average: ", calcAverage(tips));
+
+console.log("we are updating automatically")
